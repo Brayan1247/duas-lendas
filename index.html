@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Duas Lendas - Perfil</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="topo">
+        <div class="titulo-pagina">Duas Lendas</div>
+        <ul class="menu">
+            <li><a href="index.html">Perfil</a></li>
+            <li><a href="timeline.html">Linha do tempo</a></li>
+            <li><a href="destaques.html">Destaques</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="player.html">Player</a></li>
+        </ul>
+    </div>
+
+    <div class="seletor">
+        <button class="botao-pessoa ativo" onclick="trocarPessoa('atleta', this)">Stephen Curry</button>
+        <button class="botao-pessoa" onclick="trocarPessoa('artista', this)">Aretha Franklin</button>
+    </div>
+
+    <div class="pessoa-bloco visivel" id="atleta">
+    <div class="perfil ">
+
+        <div class="cabecalho">
+            <img class="foto" src="img/atleta/foto.jpg" alt="Stephen Curry">
+            <div class="identidade">
+                <div class="nome">Stephen Curry</div>
+                <div class="subtitulo">Armador - Golden State Warriors</div>
+            </div>
+        </div>
+
+        <ul class="abas">
+            <li class="aba ativa" onclick="mostrarAba('atleta', 'sobre', this)">Sobre</li>
+            <li class="aba" onclick="mostrarAba('atleta', 'carreira', this)">Carreira</li>
+            <li class="aba" onclick="mostrarAba('atleta', 'premios', this)">Prêmios</li>
+        </ul>
+
+        <div class="conteudo-aba visivel" id="atleta-sobre">
+            <p>Wardell Stephen Curry II nasceu em 14 de março de 1988, em Akron, Ohio (EUA). É filho de Dell Curry, que também foi jogador da NBA.</p>
+            <p>Jogou na Davidson College e foi escolhido pelos Golden State Warriors no draft de 2009. É considerado o maior arremessador de três pontos da história do basquete.</p>
+        </div>
+        <div class="conteudo-aba" id="atleta-carreira">
+            <ul class="lista">
+                <li>2009: entra na NBA, escolhido pelos Warriors.</li>
+                <li>2015: primeiro título da NBA.</li>
+                <li>2016: temporada recorde de bolas de três pontos.</li>
+                <li>2017 e 2018: bicampeão da NBA.</li>
+                <li>2022: quarto título e MVP das Finais.</li>
+                <li>2024: ouro nas Olimpíadas de Paris.</li>
+            </ul>
+        </div>
+        <div class="conteudo-aba" id="atleta-premios">
+            <ul class="lista">
+                <li>4 títulos da NBA</li>
+                <li>2 vezes MVP da temporada (2015 e 2016)</li>
+                <li>MVP das Finais da NBA (2022)</li>
+                <li>Medalha de ouro olímpica (2024)</li>
+            </ul>
+        </div>
+
+        <div class="botoes">
+            <button class="botao" onclick="alternar('atleta-curiosidades', this, 'Mostrar curiosidades', 'Esconder curiosidades')">Mostrar curiosidades</button>
+            <button class="botao" onclick="alternar('atleta-conquistas', this, 'Ver conquistas', 'Esconder conquistas')">Ver conquistas</button>
+        </div>
+        <div class="escondido" id="atleta-curiosidades">
+            <div class="rotulo">Curiosidades</div>
+            <ul class="lista">
+                <li>Usa a camisa 30, a mesma do pai nos tempos de jogador.</li>
+                <li>É conhecido pelos arremessos de longa distância.</li>
+                <li>Seu apelido é "Chef Curry".</li>
+            </ul>
+        </div>
+        <div class="escondido" id="atleta-conquistas">
+            <div class="rotulo">Conquistas</div>
+            <ul class="lista">
+                <li>Maior cestinha de bolas de três pontos da história da NBA.</li>
+                <li>Primeiro MVP unânime da história da liga (2016).</li>
+                <li>Campeão olímpico com a seleção dos EUA.</li>
+            </ul>
+        </div>
+
+        <div class="rotulo">Galeria</div>
+        <div class="galeria">
+            <img onclick="ampliar(this)" src="img/atleta/galeria-1.jpg" alt="Curry cumprimentando LeBron James">
+            <img onclick="ampliar(this)" src="img/atleta/galeria-2.jpg" alt="Curry gritando de emoção na quadra">
+            <img onclick="ampliar(this)" src="img/atleta/galeria-3.jpg" alt="Curry comemorando com o punho erguido">
+            <img onclick="ampliar(this)" src="img/atleta/galeria-4.jpg" alt="Curry com a filha">
+        </div>
+
+        <div class="rotulo">Top 30 cestas de 3 pontos</div>
+        <div class="video-link">
+                <a href="https://www.youtube.com/watch?v=flm-cZ7r6eE" target="_blank">
+                    <img src="https://img.youtube.com/vi/flm-cZ7r6eE/hqdefault.jpg" alt="Top 30 cestas de 3 pontos de Stephen Curry">
+                    <div class="icone-play">&#9654;</div>
+                </a>
+                <div class="legenda-video">Assistir no YouTube: Top 30 cestas de 3 pontos de Stephen Curry</div>
+            </div>
+
+    </div>
+    </div>
+    <div class="pessoa-bloco" id="artista">
+    <div class="perfil tema-artista">
+
+        <div class="cabecalho">
+            <img class="foto" src="img/artista/foto.jpg" alt="Aretha Franklin">
+            <div class="identidade">
+                <div class="nome">Aretha Franklin</div>
+                <div class="subtitulo">Cantora - A Rainha do Soul</div>
+            </div>
+        </div>
+
+        <ul class="abas">
+            <li class="aba ativa" onclick="mostrarAba('artista', 'sobre', this)">Sobre</li>
+            <li class="aba" onclick="mostrarAba('artista', 'carreira', this)">Carreira</li>
+            <li class="aba" onclick="mostrarAba('artista', 'premios', this)">Prêmios</li>
+        </ul>
+
+        <div class="conteudo-aba visivel" id="artista-sobre">
+            <p>Aretha Louise Franklin nasceu em 25 de março de 1942, em Memphis, Tennessee (EUA), e cresceu em Detroit. Começou a cantar cedo, no coral da igreja do pai, o reverendo C. L. Franklin.</p>
+            <p>Tornou-se uma das maiores vozes da história da música e ficou conhecida como a Rainha do Soul. Morreu em 16 de agosto de 2018, aos 76 anos.</p>
+        </div>
+        <div class="conteudo-aba" id="artista-carreira">
+            <ul class="lista">
+                <li>1960: assina com a gravadora Columbia.</li>
+                <li>1966: passa para a Atlantic Records.</li>
+                <li>1967: lança "Respect" e se torna uma estrela mundial.</li>
+                <li>1972: grava ao vivo o álbum gospel "Amazing Grace".</li>
+                <li>1987: primeira mulher no Hall da Fama do Rock and Roll.</li>
+                <li>2009: canta na posse do presidente Barack Obama.</li>
+            </ul>
+        </div>
+        <div class="conteudo-aba" id="artista-premios">
+            <ul class="lista">
+                <li>18 prêmios Grammy competitivos</li>
+                <li>Hall da Fama do Rock and Roll (1987)</li>
+                <li>Medalha Presidencial da Liberdade (2005)</li>
+                <li>Kennedy Center Honors (1994)</li>
+            </ul>
+        </div>
+
+        <div class="botoes">
+            <button class="botao" onclick="alternar('artista-curiosidades', this, 'Mostrar curiosidades', 'Esconder curiosidades')">Mostrar curiosidades</button>
+            <button class="botao" onclick="alternar('artista-conquistas', this, 'Ver conquistas', 'Esconder conquistas')">Ver conquistas</button>
+        </div>
+        <div class="escondido" id="artista-curiosidades">
+            <div class="rotulo">Curiosidades</div>
+            <ul class="lista">
+                <li>"Respect" foi escrita por Otis Redding, mas a versão dela virou um hino.</li>
+                <li>Tocava piano e cantava ao mesmo tempo.</li>
+                <li>Foi capa da revista Time em 1968.</li>
+            </ul>
+        </div>
+        <div class="escondido" id="artista-conquistas">
+            <div class="rotulo">Conquistas</div>
+            <ul class="lista">
+                <li>Primeira mulher no Hall da Fama do Rock and Roll.</li>
+                <li>Recebeu a mais alta honraria civil dos EUA, a Medalha Presidencial da Liberdade.</li>
+                <li>Gravou um dos álbuns gospel ao vivo mais vendidos de todos os tempos.</li>
+            </ul>
+        </div>
+
+        <div class="rotulo">Galeria</div>
+        <div class="galeria">
+            <img onclick="ampliar(this)" src="img/artista/galeria-1.jpg" alt="Aretha Franklin sorrindo">
+            <img onclick="ampliar(this)" src="img/artista/galeria-2.jpg" alt="Aretha Franklin ao piano">
+            <img onclick="ampliar(this)" src="img/artista/galeria-3.jpg" alt="Capa do álbum Here We Go Again">
+        </div>
+
+        <div class="rotulo">Clipe musical</div>
+        <div class="video-link">
+                <a href="https://www.youtube.com/watch?v=AM0MVuEmFGc" target="_blank">
+                    <img src="https://img.youtube.com/vi/AM0MVuEmFGc/hqdefault.jpg" alt="Clipe musical de Aretha Franklin">
+                    <div class="icone-play">&#9654;</div>
+                </a>
+                <div class="legenda-video">Assistir no YouTube: Clipe musical de Aretha Franklin</div>
+            </div>
+
+    </div>
+    </div>
+    <div class="ampliada" id="ampliada" onclick="fecharAmpliada()">
+        <img id="ampliada-img" src="" alt="Imagem ampliada">
+    </div>
+
+    <div class="rodape">Duas Lendas - Stephen Curry e Aretha Franklin</div>
+    <script src="js/comum.js"></script>
+    <script src="js/perfil.js"></script>
+</body>
+</html>

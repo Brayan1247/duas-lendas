@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Duas Lendas - Destaques</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="topo">
+        <div class="titulo-pagina">Duas Lendas</div>
+        <ul class="menu">
+            <li><a href="index.html">Perfil</a></li>
+            <li><a href="timeline.html">Linha do tempo</a></li>
+            <li><a href="destaques.html">Destaques</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="player.html">Player</a></li>
+        </ul>
+    </div>
+
+    <div class="banner">
+        <img src="img/geral/banner.jpg" alt="Banner">
+        <div class="banner-texto">
+            <div class="nome">Stephen Curry &amp; Aretha Franklin</div>
+            <p>O maior arremessador do basquete e a Rainha do Soul.</p>
+            <button class="botao" onclick="alternar('destaque', this, 'Assistir vídeos em destaque', 'Esconder vídeos')">Assistir vídeos em destaque</button>
+        </div>
+    </div>
+
+    <div class="destaque" id="destaque">
+        <div class="duplo">
+            <div class="video-link">
+                <a href="https://www.youtube.com/watch?v=flm-cZ7r6eE" target="_blank">
+                    <img src="https://img.youtube.com/vi/flm-cZ7r6eE/hqdefault.jpg" alt="Top 30 cestas de 3 pontos">
+                    <div class="icone-play">&#9654;</div>
+                </a>
+                <div class="legenda-video">Assistir no YouTube: Top 30 cestas de 3 pontos</div>
+            </div>
+            <div class="video-link">
+                <a href="https://www.youtube.com/watch?v=AM0MVuEmFGc" target="_blank">
+                    <img src="https://img.youtube.com/vi/AM0MVuEmFGc/hqdefault.jpg" alt="Clipe musical da Aretha">
+                    <div class="icone-play">&#9654;</div>
+                </a>
+                <div class="legenda-video">Assistir no YouTube: Clipe musical da Aretha</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="faixa">
+        <div class="rotulo claro">Stephen Curry - Momentos marcantes</div>
+        <div class="cards">
+            <div class="card" onclick="abrirModal('atleta', 0)"><img src="img/atleta/card-1.jpg" alt="Primeiro título"><div class="card-nome">Primeiro título</div></div>
+            <div class="card" onclick="abrirModal('atleta', 1)"><img src="img/atleta/card-2.jpg" alt="MVP unânime"><div class="card-nome">MVP unânime</div></div>
+            <div class="card" onclick="abrirModal('atleta', 2)"><img src="img/atleta/card-3.jpg" alt="Recorde de 3 pontos"><div class="card-nome">Recorde de 3 pontos</div></div>
+            <div class="card" onclick="abrirModal('atleta', 3)"><img src="img/atleta/card-4.jpg" alt="MVP das Finais"><div class="card-nome">MVP das Finais</div></div>
+            <div class="card" onclick="abrirModal('atleta', 4)"><img src="img/atleta/card-5.jpg" alt="Ouro em Paris"><div class="card-nome">Ouro em Paris</div></div>
+            <div class="card" onclick="abrirModal('atleta', 5)"><img src="img/atleta/card-6.jpg" alt="Davidson"><div class="card-nome">Davidson</div></div>
+        </div>
+        <div class="rotulo claro">Aretha Franklin - Músicas e momentos</div>
+        <div class="cards">
+            <div class="card" onclick="abrirModal('artista', 0)"><img src="img/artista/card-1.jpg" alt="Respect"><div class="card-nome">Respect</div></div>
+            <div class="card" onclick="abrirModal('artista', 1)"><img src="img/artista/card-2.jpg" alt="Natural Woman"><div class="card-nome">Natural Woman</div></div>
+            <div class="card" onclick="abrirModal('artista', 2)"><img src="img/artista/card-3.jpg" alt="Chain of Fools"><div class="card-nome">Chain of Fools</div></div>
+            <div class="card" onclick="abrirModal('artista', 3)"><img src="img/artista/card-4.jpg" alt="Think"><div class="card-nome">Think</div></div>
+            <div class="card" onclick="abrirModal('artista', 4)"><img src="img/artista/card-5.jpg" alt="Amazing Grace"><div class="card-nome">Amazing Grace</div></div>
+            <div class="card" onclick="abrirModal('artista', 5)"><img src="img/artista/card-6.jpg" alt="Hall da Fama"><div class="card-nome">Hall da Fama</div></div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal" onclick="fecharModal()">
+        <div class="modal-caixa" onclick="event.stopPropagation()">
+            <button class="fechar" onclick="fecharModal()">X</button>
+            <img id="modal-img" src="" alt="">
+            <div class="nome" id="modal-titulo"></div>
+            <p id="modal-texto"></p>
+        </div>
+    </div>
+
+    <div class="rodape">Duas Lendas - Stephen Curry e Aretha Franklin</div>
+    <script src="js/comum.js"></script>
+    <script src="js/destaques.js"></script>
+</body>
+</html>

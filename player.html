@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Duas Lendas - Player</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="topo">
+        <div class="titulo-pagina">Duas Lendas</div>
+        <ul class="menu">
+            <li><a href="index.html">Perfil</a></li>
+            <li><a href="timeline.html">Linha do tempo</a></li>
+            <li><a href="destaques.html">Destaques</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="player.html">Player</a></li>
+        </ul>
+    </div>
+
+    <div class="perfil">
+        <div class="nome">Player multimídia</div>
+        <div class="subtitulo" id="titulo-midia"></div>
+
+        <div class="tela">
+            <div class="video-link">
+                <a id="link-video" href="#" target="_blank">
+                    <img id="miniatura" src="" alt="Miniatura do vídeo">
+                    <div class="icone-play">&#9654;</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="botoes">
+            <button class="botao" onclick="anterior()">Anterior</button>
+            <button class="botao" onclick="assistir()">Assistir no YouTube</button>
+            <button class="botao" onclick="proximo()">Próximo</button>
+        </div>
+
+        <div class="seletor">
+            <button class="botao-pessoa ativo" onclick="trocarPessoa('atleta', this)">Stephen Curry</button>
+            <button class="botao-pessoa" onclick="trocarPessoa('artista', this)">Aretha Franklin</button>
+        </div>
+
+        <div class="pessoa-bloco visivel" id="atleta">
+            <div class="rotulo">Vídeos do Stephen Curry</div>
+            <ul class="playlist" id="lista-atleta"></ul>
+        </div>
+
+        <div class="pessoa-bloco" id="artista">
+            <div class="rotulo">Músicas e clipes da Aretha Franklin</div>
+            <ul class="playlist" id="lista-artista"></ul>
+        </div>
+
+        <div class="rotulo">Imagens relacionadas</div>
+        <div class="galeria">
+            <img onclick="ampliar(this)" src="img/atleta/galeria-1.jpg" alt="Stephen Curry">
+            <img onclick="ampliar(this)" src="img/artista/galeria-1.jpg" alt="Aretha Franklin">
+            <img onclick="ampliar(this)" src="img/atleta/galeria-2.jpg" alt="Stephen Curry">
+            <img onclick="ampliar(this)" src="img/artista/galeria-2.jpg" alt="Aretha Franklin">
+        </div>
+    </div>
+
+    <div class="ampliada" id="ampliada" onclick="fecharAmpliada()">
+        <img id="ampliada-img" src="" alt="Imagem ampliada">
+    </div>
+
+    <div class="rodape">Duas Lendas - Stephen Curry e Aretha Franklin</div>
+    <script src="js/comum.js"></script>
+    <script src="js/player.js"></script>
+</body>
+</html>

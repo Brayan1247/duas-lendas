@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Duas Lendas - Linha do tempo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="topo">
+        <div class="titulo-pagina">Duas Lendas</div>
+        <ul class="menu">
+            <li><a href="index.html">Perfil</a></li>
+            <li><a href="timeline.html">Linha do tempo</a></li>
+            <li><a href="destaques.html">Destaques</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="player.html">Player</a></li>
+        </ul>
+    </div>
+
+    <div class="seletor">
+        <button class="botao-pessoa ativo" onclick="trocarPessoa('atleta', this)">Stephen Curry</button>
+        <button class="botao-pessoa" onclick="trocarPessoa('artista', this)">Aretha Franklin</button>
+    </div>
+
+    <div class="pessoa-bloco visivel" id="atleta">
+    <div class="perfil">
+        <div class="nome">Stephen Curry</div>
+        <p class="subtitulo">Clique em um ano para ver os detalhes. Role a página para ver os eventos aparecerem.</p>
+        <div class="linha">
+            <div class="evento">
+                <div class="ano" onclick="mostrarAno('c2009', this)">2009</div>
+                <div class="detalhe" id="c2009">
+                    <img src="img/atleta/linha-2009.jpg" alt="2009">
+                    <p>Depois de brilhar na Davidson College, Curry é escolhido pelos Golden State Warriors no draft e estreia na NBA.</p>
+                </div>
+            </div>
+            <div class="evento">
+                <div class="ano" onclick="mostrarAno('c2015', this)">2015</div>
+                <div class="detalhe" id="c2015">
+                    <img src="img/atleta/linha-2015.jpg" alt="2015">
+                    <p>Primeiro título da NBA com os Warriors e primeiro prêmio de MVP da temporada.</p>
+                </div>
+            </div>
+            <div class="evento">
+                <div class="ano" onclick="mostrarAno('c2016', this)">2016</div>
+                <div class="detalhe" id="c2016">
+                    <img src="img/atleta/linha-2016.jpg" alt="2016">
+                    <p>Curry é eleito MVP por unanimidade e faz 402 bolas de três pontos em uma temporada, um recorde.</p>
+                </div>
+            </div>
+            <div class="evento">
+                <div class="ano" onclick="mostrarAno('c2018', this)">2018</div>
+                <div class="detalhe" id="c2018">
+                    <img src="img/atleta/linha-2018.jpg" alt="2018">
+                    <p>Os Warriors conquistam mais um título (o terceiro de Curry, depois de 2015 e 2017).</p>
+                </div>
+            </div>
+            <div class="evento">
+                <div class="ano" onclick="mostrarAno('c2022', this)">2022</div>
+                <div class="detalhe" id="c2022">
+                    <img src="img/atleta/linha-2022.jpg" alt="2022">
+                    <p>Quarto título da NBA, e Curry é eleito o MVP das Finais pela primeira vez.</p>
+                    <img src="img/atleta/linha-2022-allstar.jpg" alt="Curry com o troféu de MVP do All-Star Game">
+                    <p>No All-Star Game de 2022, ele fez 16 bolas de três pontos, um recorde do jogo, e foi eleito MVP.</p>
+                </div>
+            </div>
+            <div class="evento">
+                <div class="ano" onclick="mostrarAno('c2024', this)">2024</div>
+                <div class="detalhe" id="c2024">
+                    <img src="img/atleta/linha-2024.jpg" alt="2024">
+                    <p>Medalha de ouro nas Olimpíadas de Paris com a seleção dos Estados Unidos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="pessoa-bloco" id="artista">
+    <div class="perfil tema-artista">
+        <div class="nome">Aretha Franklin</div>
+        <p class="subtitulo">Clique em um ano para ver os detalhes. Role a página para ver os eventos aparecerem.</p>
+        <div class="linha">
+            <div class="evento">
+                <div class="ano" onclick="mostrarAno('a1942', this)">1942</div>
+                <div class="detalhe" id="a1942">
+                    <img src="img/artista/linha-1942.jpg" alt="1942">
+                    <p>Nasce em Memphis, Tennessee, e cresce em Detroit, cantando no coral da igreja do pai.</p>
+                </div>
+            </div>
+            <div class="evento">
+                <div class="ano" onclick="mostrarAno('a1960', this)">1960</div>
+                <div class="detalhe" id="a1960">
+                    <img src="img/artista/linha-1960.jpg" alt="1960">
+                    <p>Assina com a gravadora Columbia e começa a carreira fora da igreja.</p>
+                </div>
+            </div>
+            <div class="evento">
+                <div class="ano" onclick="mostrarAno('a1967', this)">1967</div>
+                <div class="detalhe" id="a1967">
+                    <img src="img/artista/linha-1967.jpg" alt="1967">
+                    <p>Na Atlantic Records, grava "Respect", "Chain of Fools" e "Natural Woman" e vira estrela mundial.</p>
+                </div>
+            </div>
+            <div class="evento">
+                <div class="ano" onclick="mostrarAno('a1972', this)">1972</div>
+                <div class="detalhe" id="a1972">
+                    <img src="img/artista/linha-1972.jpg" alt="1972">
+                    <p>Grava ao vivo o álbum gospel "Amazing Grace", numa igreja em Los Angeles.</p>
+                </div>
+            </div>
+            <div class="evento">
+                <div class="ano" onclick="mostrarAno('a1987', this)">1987</div>
+                <div class="detalhe" id="a1987">
+                    <img src="img/artista/linha-1987.jpg" alt="1987">
+                    <p>Torna-se a primeira mulher a entrar no Hall da Fama do Rock and Roll.</p>
+                </div>
+            </div>
+            <div class="evento">
+                <div class="ano" onclick="mostrarAno('a2009', this)">2009</div>
+                <div class="detalhe" id="a2009">
+                    <img src="img/artista/linha-2009.jpg" alt="Aretha Franklin com Barack Obama">
+                    <p>Canta na posse do presidente Barack Obama, mais um grande momento da carreira.</p>
+                </div>
+            </div>
+            <div class="evento">
+                <div class="ano" onclick="mostrarAno('a2018', this)">2018</div>
+                <div class="detalhe" id="a2018">
+                    <img src="img/artista/linha-2018.jpg" alt="2018">
+                    <p>Morre em 16 de agosto, em Detroit, aos 76 anos, deixando um enorme legado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="rodape">Duas Lendas - Stephen Curry e Aretha Franklin</div>
+    <script src="js/comum.js"></script>
+    <script src="js/timeline.js"></script>
+</body>
+</html>

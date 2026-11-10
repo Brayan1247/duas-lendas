@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Duas Lendas - Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="topo">
+        <div class="titulo-pagina">Duas Lendas</div>
+        <ul class="menu">
+            <li><a href="index.html">Perfil</a></li>
+            <li><a href="timeline.html">Linha do tempo</a></li>
+            <li><a href="destaques.html">Destaques</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="player.html">Player</a></li>
+        </ul>
+    </div>
+
+    <div class="perfil" id="escolha">
+        <div class="nome">Quiz</div>
+        <p class="subtitulo">Escolha o quiz:</p>
+        <div class="botoes">
+            <button class="botao" onclick="iniciar('atleta')">Quiz Stephen Curry</button>
+            <button class="botao" onclick="iniciar('artista')">Quiz Aretha Franklin</button>
+        </div>
+    </div>
+
+    <div class="perfil" id="jogo" style="display: none;">
+        <div class="subtitulo" id="contador">Pergunta 1</div>
+        <img class="quiz-img" id="quiz-img" src="img/geral/banner.jpg" alt="Imagem da pergunta">
+        <div class="pergunta" id="pergunta"></div>
+        <div id="opcoes"></div>
+        <div class="feedback" id="feedback"></div>
+        <button class="botao escondido-botao" id="proxima" onclick="proximaPergunta()">Próxima pergunta</button>
+
+        <div class="resultado" id="resultado">
+            <div class="nome" id="pontuacao"></div>
+            <div class="botoes centro">
+                <button class="botao" onclick="iniciar(pessoaAtual)">Jogar de novo</button>
+                <button class="botao" onclick="voltar()">Escolher outro quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="rodape">Duas Lendas - Stephen Curry e Aretha Franklin</div>
+    <script src="js/quiz.js"></script>
+</body>
+</html>
